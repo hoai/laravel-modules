@@ -106,6 +106,8 @@ return [
             'controller' => ['path' => 'Http/Controllers', 'generate' => true],
             'filter' => ['path' => 'Http/Middleware', 'generate' => true],
             'request' => ['path' => 'Http/Requests', 'generate' => true],
+            'services' => ['path' => 'Http/Services', 'generate' => true],
+            'traits' => ['path' => 'Traits', 'generate' => true],
             'provider' => ['path' => 'Providers', 'generate' => true],
             'assets' => ['path' => 'Resources/assets', 'generate' => true],
             'lang' => ['path' => 'Resources/lang', 'generate' => true],
@@ -150,8 +152,8 @@ return [
     'composer' => [
         'vendor' => 'nwidart',
         'author' => [
-            'name' => 'Nicolas Widart',
-            'email' => 'n.widart@gmail.com',
+            'name' => 'lampart',
+            'email' => 'admin@lampart-vn.com',
         ],
     ],
     /*
