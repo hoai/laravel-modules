@@ -24,7 +24,7 @@ return [
 
     'stubs' => [
         'enabled' => false,
-        'path' => base_path() . '/vendor/nwidart/laravel-modules/src/Commands/stubs',
+        'path' => base_path() . '/vendor/hoai/laravel-modules-main/src/Commands/stubs',
         'files' => [
             'routes/web' => 'Routes/web.php',
             'routes/api' => 'Routes/api.php',
@@ -106,19 +106,21 @@ return [
             'controller' => ['path' => 'Http/Controllers', 'generate' => true],
             'filter' => ['path' => 'Http/Middleware', 'generate' => true],
             'request' => ['path' => 'Http/Requests', 'generate' => true],
+            'services' => ['path' => 'Http/Services', 'generate' => true],
+            'traits' => ['path' => 'Traits', 'generate' => true],
             'provider' => ['path' => 'Providers', 'generate' => true],
             'assets' => ['path' => 'Resources/assets', 'generate' => true],
             'lang' => ['path' => 'Resources/lang', 'generate' => true],
             'views' => ['path' => 'Resources/views', 'generate' => true],
             'test' => ['path' => 'Tests', 'generate' => true],
-            'repository' => ['path' => 'Repositories', 'generate' => false],
-            'event' => ['path' => 'Events', 'generate' => false],
-            'listener' => ['path' => 'Listeners', 'generate' => false],
-            'policies' => ['path' => 'Policies', 'generate' => false],
-            'rules' => ['path' => 'Rules', 'generate' => false],
-            'jobs' => ['path' => 'Jobs', 'generate' => false],
-            'emails' => ['path' => 'Emails', 'generate' => false],
-            'notifications' => ['path' => 'Notifications', 'generate' => false],
+            'repository' => ['path' => 'Repositories', 'generate' => true],
+            'event' => ['path' => 'Events', 'generate' => true],
+            'listener' => ['path' => 'Listeners', 'generate' => true],
+            'policies' => ['path' => 'Policies', 'generate' => true],
+            'rules' => ['path' => 'Rules', 'generate' => true],
+            'jobs' => ['path' => 'Jobs', 'generate' => true],
+            'emails' => ['path' => 'Emails', 'generate' => true],
+            'notifications' => ['path' => 'Notifications', 'generate' => true],
             'resource' => ['path' => 'Transformers', 'generate' => false],
         ],
     ],
@@ -148,10 +150,10 @@ return [
     */
 
     'composer' => [
-        'vendor' => 'nwidart',
+        'vendor' => 'lampart',
         'author' => [
-            'name' => 'Nicolas Widart',
-            'email' => 'n.widart@gmail.com',
+            'name' => 'lampart',
+            'email' => 'admin@lampart-vn.com',
         ],
     ],
     /*
