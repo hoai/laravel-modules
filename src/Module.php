@@ -412,8 +412,6 @@ abstract class Module extends ServiceProvider
      */
     protected function isLoadFilesOnBoot()
     {
-        return config('modules.register.files', 'register') === 'boot' &&
-            // force register method if option == boot && app is AsgardCms
-            !class_exists('\Modules\Core\Foundation\AsgardCms');
+        return config('modules.register.files', 'register') === 'boot' ;
     }
 }

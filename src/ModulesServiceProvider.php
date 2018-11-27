@@ -72,6 +72,7 @@ abstract class ModulesServiceProvider extends ServiceProvider
     protected function registerProviders()
     {
         $this->app->register(ConsoleServiceProvider::class);
-        $this->app->register(ContractsServiceProvider::class);
+        //disable because is duplicated
+        //$this->app->register(ContractsServiceProvider::class);
     }
 }

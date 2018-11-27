@@ -43,6 +43,13 @@ abstract class FileRepository implements RepositoryInterface, Countable
     protected $stubPath;
 
     /**
+     * The current globally available modules cache (if any).
+     *
+     * @var static
+     */
+    protected static $instanceModules = null;
+
+    /**
      * The constructor.
      *
      * @param Container $app
@@ -177,9 +184,26 @@ abstract class FileRepository implements RepositoryInterface, Countable
      */
     public function getCached()
     {
-        return $this->app['cache']->remember($this->config('cache.key'), $this->config('cache.lifetime'), function () {
-            return $this->toCollection()->toArray();
-        });
+        //disable because app cache not exist when registered
+//        return $this->app['cache']->remember($this->config('cache.key'), $this->config('cache.lifetime'), function () {
+//            return $this->toCollection()->toArray();
+//        });
+        //fork new cache
+        return $this->getInstanceModules();
+    }
+    /**
+     * Get all modules from instance modules.
+     *
+     * @return Collection
+     */
+    public function getInstanceModules()
+    {
+        if (self::$instanceModules == null)
+        {
+            self::$instanceModules = $this->toCollection()->toArray();
+        }
+
+        return self::$instanceModules;
     }
 
     /**

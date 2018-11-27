@@ -158,19 +158,6 @@ return [
     ],
     /*
     |--------------------------------------------------------------------------
-    | Caching
-    |--------------------------------------------------------------------------
-    |
-    | Here is the config for setting up caching feature.
-    |
-    */
-    'cache' => [
-        'enabled' => false,
-        'key' => 'laravel-modules',
-        'lifetime' => 60,
-    ],
-    /*
-    |--------------------------------------------------------------------------
     | Choose what laravel-modules will register as custom namespaces.
     | Setting one to false will require you to register that part
     | in your own Service Provider class.
