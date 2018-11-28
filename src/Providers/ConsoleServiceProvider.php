@@ -42,6 +42,9 @@ use Nwidart\Modules\Commands\TestMakeCommand;
 use Nwidart\Modules\Commands\UnUseCommand;
 use Nwidart\Modules\Commands\UpdateCommand;
 use Nwidart\Modules\Commands\UseCommand;
+use Nwidart\Modules\Commands\RepositoryMakeCommand;
+use Nwidart\Modules\Commands\ValidatorMakeCommand;
+use Nwidart\Modules\Commands\ResponseMakeCommand;
 
 class ConsoleServiceProvider extends ServiceProvider
 {
@@ -92,6 +95,9 @@ class ConsoleServiceProvider extends ServiceProvider
         UseCommand::class,
         ResourceMakeCommand::class,
         TestMakeCommand::class,
+        RepositoryMakeCommand::class,
+        ValidatorMakeCommand::class,
+        ResponseMakeCommand::class
     ];
 
     /**
