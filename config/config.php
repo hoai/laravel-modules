@@ -35,7 +35,7 @@ return [
             'assets/js/app' => 'Resources/assets/js/app.js',
             'assets/sass/app' => 'Resources/assets/sass/app.scss',
             'webpack' => 'webpack.mix.js',
-            'package' => 'package.json',
+            'package' => 'package.json'
         ],
         'replacements' => [
             'routes/web' => ['LOWER_NAME', 'STUDLY_NAME'],
@@ -122,7 +122,8 @@ return [
             'emails' => ['path' => 'Emails', 'generate' => true],
             'notifications' => ['path' => 'Notifications', 'generate' => true],
             'resource' => ['path' => 'Transformers', 'generate' => false],
-            'responses' => ['path' => 'Responses', 'generate' => true],
+            'response' => ['path' => 'Responses', 'generate' => true],
+            'validator' => ['path' => 'Validators', 'generate' => true],
 
         ],
     ],

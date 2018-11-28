@@ -8,7 +8,7 @@ use Nwidart\Modules\Traits\ModuleCommandTrait;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 
-class RepositoryMakeCommand extends GeneratorCommand
+class ResponseMakeCommand extends GeneratorCommand
 {
     use ModuleCommandTrait;
 
@@ -17,31 +17,31 @@ class RepositoryMakeCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $argumentName = 'repository';
+    protected $argumentName = 'response';
 
     /**
      * Single or multi file stubs need generate.
      *
      * @var []
      */
-    protected $multiFiles = ['BaseRepository', 'Criteria', 'Repository'];
+    protected $multiFiles = [];
 
     /**
      * The console command name.
      *
      * @var string
      */
-    protected $name = 'module:make-repository';
+    protected $name = 'module:make-response';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Generate new repository for the specified module.';
+    protected $description = 'Generate new response for the specified module.';
 
     /**
-     * Get repository name.
+     * Get response name.
      *
      * @return string
      */
@@ -49,24 +49,24 @@ class RepositoryMakeCommand extends GeneratorCommand
     {
         $path = $this->laravel['modules']->getModulePath($this->getModuleName());
 
-        $repositoryPath = GenerateConfigReader::read('repository');
+        $responsePath = GenerateConfigReader::read('response');
 
-        return $path . $repositoryPath->getPath() . '/' . $this->getRepositoryName($file_name) . '.php';
+        return $path . $responsePath->getPath() . '/' . $this->getResponseName($file_name) . '.php';
     }
 
     /**
      * @return string
      */
-    protected function getTemplateContents($file_name = null)
+    protected function getTemplateContents()
     {
         $module = $this->laravel['modules']->findOrFail($this->getModuleName());
 
-        return (new Stub($this->getStubName($file_name), [
+        return (new Stub($this->getStubName(), [
             'MODULENAME'        => $module->getStudlyName(),
-            'CONTROLLERNAME'    => $this->getRepositoryName(),
+            'CONTROLLERNAME'    => $this->getResponseName(),
             'NAMESPACE'         => $module->getStudlyName(),
             'CLASS_NAMESPACE'   => $this->getClassNamespace($module),
-            'CLASS'             => $this->getRepositoryNameWithoutNamespace(),
+            'CLASS'             => $this->getResponseNameWithoutNamespace(),
             'LOWER_NAME'        => $module->getLowerName(),
             'MODULE'            => $this->getModuleName(),
             'NAME'              => $this->getModuleName(),
@@ -83,7 +83,7 @@ class RepositoryMakeCommand extends GeneratorCommand
     protected function getArguments()
     {
         return [
-            ['repository', InputArgument::REQUIRED, 'The name of the repository class.'],
+            ['response', InputArgument::REQUIRED, 'The name of the response class.'],
             ['module', InputArgument::OPTIONAL, 'The name of module will be used.'],
         ];
     }
@@ -94,46 +94,41 @@ class RepositoryMakeCommand extends GeneratorCommand
     protected function getOptions()
     {
         return [
-            ['plain', 'p', InputOption::VALUE_NONE, 'Generate a plain repository', null],
+            ['plain', 'p', InputOption::VALUE_NONE, 'Generate a plain response', null],
         ];
     }
 
     /**
      * @return array|string
      */
-    protected function getRepositoryName($file_name=null)
+    protected function getResponseName($file_name=null)
     {
         $module_name = $this->getModuleName();
 
-        $repository = empty($file_name)? studly_case($this->argument('repository')) : $file_name;
+        $response = empty($file_name)? studly_case($this->argument('response')) : $file_name;
 
-        if (empty($file_name) && str_contains(strtolower($repository), 'repository') === false) {
-            $repository .= 'Repository';
-        }
-
-
-        return $module_name.$repository;
+        return $module_name.$response;
     }
 
     /**
      * @return array|string
      */
-    private function getRepositoryNameWithoutNamespace()
+    private function getResponseNameWithoutNamespace()
     {
-        return class_basename($this->getRepositoryName());
+        return class_basename($this->getResponseName());
     }
 
     public function getDefaultNamespace() : string
     {
-        return $this->laravel['modules']->config('paths.generator.repository.path', 'Repositories');
+        return $this->laravel['modules']->config('paths.generator.response.path', 'Responses');
     }
 
     /**
      * Get the stub file name based on the plain option
      * @return string
      */
-    private function getStubName($file_name)
+    private function getStubName()
     {
-        return '/Repository/'.$file_name.'.stub';
+        return '/Response/response.stub';
     }
 }

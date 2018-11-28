@@ -16,18 +16,25 @@ abstract class GeneratorCommand extends Command
     protected $argumentName = '';
 
     /**
+     * Single or multi file stubs need generate.
+     *
+     * @var []
+     */
+    protected $multiFiles = [];
+
+    /**
      * Get template contents.
      *
      * @return string
      */
-    abstract protected function getTemplateContents();
+    abstract protected function getTemplateContents($file_name = null);
 
     /**
      * Get the destination file path.
      *
      * @return string
      */
-    abstract protected function getDestinationFilePath();
+    abstract protected function getDestinationFilePath($file_name = null);
 
     /**
      * Execute the console command.
@@ -37,10 +44,33 @@ abstract class GeneratorCommand extends Command
         $path = str_replace('\\', '/', $this->getDestinationFilePath());
 
         if (!$this->laravel['files']->isDirectory($dir = dirname($path))) {
+
             $this->laravel['files']->makeDirectory($dir, 0777, true);
         }
 
-        $contents = $this->getTemplateContents();
+        if(empty($multiFiles)){
+
+            $contents = $this->getTemplateContents();
+
+            $this->fileGenerate($path, $contents);
+        }
+        else {
+
+            foreach($multiFiles as $file_name){
+
+                $path = str_replace('\\', '/', $this->getDestinationFilePath($file_name));
+
+                $contents = $this->getTemplateContents($file_name);
+
+                $this->fileGenerate($path, $contents);
+            }
+        }
+
+    }
+    /**
+     * File generate
+     */
+    public function fileGenerate($path, $contents){
 
         try {
             with(new FileGenerator($path, $contents))->generate();
@@ -49,6 +79,7 @@ abstract class GeneratorCommand extends Command
         } catch (FileAlreadyExistException $e) {
             $this->error("File : {$path} already exists.");
         }
+
     }
 
     /**
