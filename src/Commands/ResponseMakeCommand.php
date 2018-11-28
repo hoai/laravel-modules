@@ -129,6 +129,6 @@ class ResponseMakeCommand extends GeneratorCommand
      */
     private function getStubName()
     {
-        return '/Responses/response.stub';
+        return '/responses/Response.stub';
     }
 }

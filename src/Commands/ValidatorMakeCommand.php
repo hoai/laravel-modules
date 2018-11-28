@@ -134,6 +134,6 @@ class ValidatorMakeCommand extends GeneratorCommand
      */
     private function getStubName()
     {
-        return '/Validators/validator.stub';
+        return '/validators/Validator.stub';
     }
 }
