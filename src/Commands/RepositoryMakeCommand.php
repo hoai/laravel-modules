@@ -134,6 +134,6 @@ class RepositoryMakeCommand extends GeneratorCommand
      */
     private function getStubName($file_name)
     {
-        return '/Repository/'.$file_name.'.stub';
+        return '/Repositories/'.$file_name.'.stub';
     }
 }

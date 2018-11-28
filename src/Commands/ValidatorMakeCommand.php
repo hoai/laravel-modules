@@ -134,10 +134,6 @@ class ValidatorMakeCommand extends GeneratorCommand
      */
     private function getStubName()
     {
-        if ($this->option('plain') === true) {
-            return '/validator-plain.stub';
-        }
-
-        return '/validator.stub';
+        return '/Validators/validator.stub';
     }
 }

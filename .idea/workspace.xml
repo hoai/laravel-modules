@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c15277e-ee40-40c1-b485-de1f9c9f8487" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Commands/ResponseMakeCommand.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Commands/ValidatorMakeCommand.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.php" afterPath="$PROJECT_DIR$/config/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Commands/GeneratorCommand.php" afterPath="$PROJECT_DIR$/src/Commands/GeneratorCommand.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Commands/RepositoryMakeCommand.php" afterPath="$PROJECT_DIR$/src/Commands/RepositoryMakeCommand.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Commands/stubs/Repositories/BaseRepository.stub" afterPath="$PROJECT_DIR$/src/Commands/stubs/repositories/BaseRepository.stub" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Commands/stubs/Repositories/Criteria.stub" afterPath="$PROJECT_DIR$/src/Commands/stubs/repositories/Criteria.stub" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Commands/stubs/Repositories/Repository.stub" afterPath="$PROJECT_DIR$/src/Commands/stubs/repositories/Repository.stub" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Commands/ResponseMakeCommand.php" afterPath="$PROJECT_DIR$/src/Commands/ResponseMakeCommand.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Commands/ValidatorMakeCommand.php" afterPath="$PROJECT_DIR$/src/Commands/ValidatorMakeCommand.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,8 +29,8 @@
       <file leaf-file-name="ResponseMakeCommand.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Commands/ResponseMakeCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+            <state relative-caret-position="662">
+              <caret line="131" column="26" lean-forward="false" selection-start-line="131" selection-start-column="26" selection-end-line="131" selection-end-column="26" />
               <folding>
                 <element signature="e#44#100#0#PHP" expanded="true" />
               </folding>
@@ -47,8 +41,8 @@
       <file leaf-file-name="ValidatorMakeCommand.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Commands/ValidatorMakeCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="121" column="5" lean-forward="true" selection-start-line="121" selection-start-column="5" selection-end-line="121" selection-end-column="5" />
+            <state relative-caret-position="662">
+              <caret line="136" column="27" lean-forward="false" selection-start-line="136" selection-start-column="27" selection-end-line="136" selection-end-column="27" />
               <folding>
                 <element signature="e#44#100#0#PHP" expanded="true" />
               </folding>
@@ -59,8 +53,8 @@
       <file leaf-file-name="RepositoryMakeCommand.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Commands/RepositoryMakeCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2972">
-              <caret line="139" column="0" lean-forward="true" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+            <state relative-caret-position="2224">
+              <caret line="138" column="1" lean-forward="true" selection-start-line="138" selection-start-column="1" selection-end-line="138" selection-end-column="1" />
               <folding>
                 <element signature="e#44#100#0#PHP" expanded="true" />
               </folding>
@@ -109,16 +103,16 @@
       <find>function class_basename</find>
       <find>scaffold</find>
       <find>Repository</find>
-      <find>controller</find>
       <find>getDestinationFilePath</find>
-      <find>getDefaultNamespace</find>
       <find>getTemplateContents</find>
+      <find>getDefaultNamespace</find>
       <find>getStubName</find>
+      <find>controller</find>
     </findStrings>
     <replaceStrings>
+      <replace>Validator</replace>
       <replace>Response</replace>
       <replace>repository</replace>
-      <replace>Validator</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -144,9 +138,9 @@
         <option value="$PROJECT_DIR$/src/Commands/stubs/Repositories/BaseRepository.stub" />
         <option value="$PROJECT_DIR$/src/Commands/stubs/routes/api.stub" />
         <option value="$PROJECT_DIR$/config/config.php" />
-        <option value="$PROJECT_DIR$/src/Commands/ResponseMakeCommand.php" />
-        <option value="$PROJECT_DIR$/src/Commands/ValidatorMakeCommand.php" />
         <option value="$PROJECT_DIR$/src/Commands/GeneratorCommand.php" />
+        <option value="$PROJECT_DIR$/src/Commands/ValidatorMakeCommand.php" />
+        <option value="$PROJECT_DIR$/src/Commands/ResponseMakeCommand.php" />
         <option value="$PROJECT_DIR$/src/Commands/RepositoryMakeCommand.php" />
       </list>
     </option>
@@ -589,12 +583,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542682501428</updated>
-      <workItem from="1542682503677" duration="51226000" />
+      <workItem from="1542682503677" duration="51653000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51226000" />
+    <option name="totallyTimeSpent" value="51653000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-78" width="1936" height="1056" extended-state="6" />
@@ -630,14 +624,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/LaravelModuleTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4261">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/NameParserTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
@@ -1008,34 +994,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="125" column="22" lean-forward="false" selection-start-line="125" selection-start-column="13" selection-end-line="125" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Commands/ValidatorMakeCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="121" column="5" lean-forward="true" selection-start-line="121" selection-start-column="5" selection-end-line="121" selection-end-column="5" />
-          <folding>
-            <element signature="e#44#100#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Commands/ResponseMakeCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
-          <folding>
-            <element signature="e#44#100#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Commands/GeneratorCommand.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -1046,10 +1004,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Traits/ModuleCommandTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Commands/ValidatorMakeCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="662">
+          <caret line="136" column="27" lean-forward="false" selection-start-line="136" selection-start-column="27" selection-end-line="136" selection-end-column="27" />
+          <folding>
+            <element signature="e#44#100#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Commands/ResponseMakeCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="662">
+          <caret line="131" column="26" lean-forward="false" selection-start-line="131" selection-start-column="26" selection-end-line="131" selection-end-column="26" />
+          <folding>
+            <element signature="e#44#100#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="125" column="22" lean-forward="false" selection-start-line="125" selection-start-column="13" selection-end-line="125" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Commands/RepositoryMakeCommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2972">
-          <caret line="139" column="0" lean-forward="true" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+        <state relative-caret-position="2224">
+          <caret line="138" column="1" lean-forward="true" selection-start-line="138" selection-start-column="1" selection-end-line="138" selection-end-column="1" />
           <folding>
             <element signature="e#44#100#0#PHP" expanded="true" />
           </folding>
