@@ -284,6 +284,8 @@ class ModuleGenerator extends Generator
 
             $path = $this->module->getModulePath($this->getName()) . '/' . $folder->getPath();
 
+            $path = str_replace('//', '/', $path);
+
             $this->filesystem->makeDirectory($path, 0755, true);
             if (config('modules.stubs.gitkeep')) {
                 $this->generateGitKeep($path);

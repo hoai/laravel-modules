@@ -127,7 +127,7 @@ class EntityMakeCommand extends GeneratorCommand
      * Get the stub file name based on the plain option
      * @return string
      */
-    private function getStubName($file_name)
+    private function getStubName($file_name = null)
     {
         return '/entities/'.$file_name.'.stub';
     }
