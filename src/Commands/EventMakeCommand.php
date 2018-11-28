@@ -27,7 +27,7 @@ class EventMakeCommand extends GeneratorCommand
      */
     protected $description = 'Create a new event class for the specified module';
 
-    public function getTemplateContents()
+    public function getTemplateContents($file_name = null)
     {
         $module = $this->laravel['modules']->findOrFail($this->getModuleName());
 
@@ -37,7 +37,7 @@ class EventMakeCommand extends GeneratorCommand
         ]))->render();
     }
 
-    public function getDestinationFilePath()
+    public function getDestinationFilePath($file_name = null)
     {
         $path       = $this->laravel['modules']->getModulePath($this->getModuleName());
 

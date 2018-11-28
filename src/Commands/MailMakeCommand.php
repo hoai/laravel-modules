@@ -50,7 +50,7 @@ class MailMakeCommand extends GeneratorCommand
      *
      * @return string
      */
-    protected function getTemplateContents()
+    protected function getTemplateContents($file_name = null)
     {
         $module = $this->laravel['modules']->findOrFail($this->getModuleName());
 
@@ -65,7 +65,7 @@ class MailMakeCommand extends GeneratorCommand
      *
      * @return string
      */
-    protected function getDestinationFilePath()
+    protected function getDestinationFilePath($file_name = null)
     {
         $path = $this->laravel['modules']->getModulePath($this->getModuleName());
 

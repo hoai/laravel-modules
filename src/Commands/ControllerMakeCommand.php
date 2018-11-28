@@ -38,7 +38,7 @@ class ControllerMakeCommand extends GeneratorCommand
      *
      * @return string
      */
-    public function getDestinationFilePath()
+    public function getDestinationFilePath($file_name = null)
     {
         $path = $this->laravel['modules']->getModulePath($this->getModuleName());
 
@@ -50,7 +50,7 @@ class ControllerMakeCommand extends GeneratorCommand
     /**
      * @return string
      */
-    protected function getTemplateContents()
+    protected function getTemplateContents($file_name = null)
     {
         $module = $this->laravel['modules']->findOrFail($this->getModuleName());
 

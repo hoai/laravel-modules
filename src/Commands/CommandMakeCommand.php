@@ -67,7 +67,7 @@ class CommandMakeCommand extends GeneratorCommand
     /**
      * @return mixed
      */
-    protected function getTemplateContents()
+    protected function getTemplateContents($file_name = null)
     {
         $module = $this->laravel['modules']->findOrFail($this->getModuleName());
 
@@ -89,7 +89,7 @@ class CommandMakeCommand extends GeneratorCommand
     /**
      * @return mixed
      */
-    protected function getDestinationFilePath()
+    protected function getDestinationFilePath($file_name = null)
     {
         $path = $this->laravel['modules']->getModulePath($this->getModuleName());
 

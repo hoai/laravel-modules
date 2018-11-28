@@ -55,7 +55,7 @@ class ListenerMakeCommand extends GeneratorCommand
         ];
     }
 
-    protected function getTemplateContents()
+    protected function getTemplateContents($file_name = null)
     {
         $module = $this->laravel['modules']->findOrFail($this->getModuleName());
 
@@ -83,7 +83,7 @@ class ListenerMakeCommand extends GeneratorCommand
         return $this->getClassNamespace($module) . "\\" . $eventPath->getPath() . "\\" . $this->option('event');
     }
 
-    protected function getDestinationFilePath()
+    protected function getDestinationFilePath($file_name = null)
     {
         $path = $this->laravel['modules']->getModulePath($this->getModuleName());
 

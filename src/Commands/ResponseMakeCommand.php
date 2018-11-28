@@ -57,7 +57,7 @@ class ResponseMakeCommand extends GeneratorCommand
     /**
      * @return string
      */
-    protected function getTemplateContents()
+    protected function getTemplateContents($file_name = null)
     {
         $module = $this->laravel['modules']->findOrFail($this->getModuleName());
 
