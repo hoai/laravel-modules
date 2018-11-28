@@ -5,10 +5,10 @@ namespace $CLASS_NAMESPACE$;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Modules\Core\Http\Controllers\BaseController;
-use Modules\$MODULE$\Repositories\SampleCriteria;
-use Modules\$MODULE$\Repositories\SampleRepository;
-use Modules\$MODULE$\Responses\SampleResponse;
-use Modules\$MODULE$\Validators\SampleValidator;
+use Modules\$MODULE$\Repositories\$MODULE$Criteria;
+use Modules\$MODULE$\Repositories\$MODULE$Repository;
+use Modules\$MODULE$\Responses\$MODULE$Response;
+use Modules\$MODULE$\Validators\$MODULE$Validator;
 
 class $CLASS$ extends BaseController
 {

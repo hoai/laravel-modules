@@ -17,7 +17,7 @@ class RepositoryMakeCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $argumentName = 'repository';
+    protected $argumentName = 'name';
 
     /**
      * Single or multi file stubs need generate.
@@ -83,7 +83,7 @@ class RepositoryMakeCommand extends GeneratorCommand
     protected function getArguments()
     {
         return [
-            ['name', InputArgument::REQUIRED, 'The name of the repository class.'],
+            ['name', InputArgument::OPTIONAL, 'The name of the repository class.'],
             ['module', InputArgument::OPTIONAL, 'The name of module will be used.'],
         ];
     }

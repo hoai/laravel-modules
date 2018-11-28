@@ -8,7 +8,7 @@ use Nwidart\Modules\Traits\ModuleCommandTrait;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 
-class ResponseMakeCommand extends GeneratorCommand
+class EntityMakeCommand extends GeneratorCommand
 {
     use ModuleCommandTrait;
 
@@ -24,24 +24,24 @@ class ResponseMakeCommand extends GeneratorCommand
      *
      * @var []
      */
-    protected $multiFiles = [];
+    protected $multiFiles = ['BaseModel', 'Model'];
 
     /**
      * The console command name.
      *
      * @var string
      */
-    protected $name = 'module:make-response';
+    protected $name = 'module:make-entity';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Generate new response for the specified module.';
+    protected $description = 'Generate new entity for the specified module.';
 
     /**
-     * Get response name.
+     * Get entity name.
      *
      * @return string
      */
@@ -49,9 +49,9 @@ class ResponseMakeCommand extends GeneratorCommand
     {
         $path = $this->laravel['modules']->getModulePath($this->getModuleName());
 
-        $responsePath = GenerateConfigReader::read('response');
+        $entityPath = GenerateConfigReader::read('entity');
 
-        return $path . $responsePath->getPath() . '/' . $this->getResponseName($file_name) . '.php';
+        return $path . $entityPath->getPath() . '/' . $this->getEntityName($file_name) . '.php';
     }
 
     /**
@@ -63,10 +63,10 @@ class ResponseMakeCommand extends GeneratorCommand
 
         return (new Stub($this->getStubName(), [
             'MODULENAME'        => $module->getStudlyName(),
-            'CONTROLLERNAME'    => $this->getResponseName(),
+            'CONTROLLERNAME'    => $this->getEntityName(),
             'NAMESPACE'         => $module->getStudlyName(),
             'CLASS_NAMESPACE'   => $this->getClassNamespace($module),
-            'CLASS'             => $this->getResponseNameWithoutNamespace(),
+            'CLASS'             => $this->getEntityNameWithoutNamespace(),
             'LOWER_NAME'        => $module->getLowerName(),
             'MODULE'            => $this->getModuleName(),
             'NAME'              => $this->getModuleName(),
@@ -83,7 +83,7 @@ class ResponseMakeCommand extends GeneratorCommand
     protected function getArguments()
     {
         return [
-            ['name', InputArgument::OPTIONAL, 'The name of the response class.'],
+            ['name', InputArgument::OPTIONAL, 'The name of the entity class.'],
             ['module', InputArgument::OPTIONAL, 'The name of module will be used.'],
         ];
     }
@@ -94,41 +94,41 @@ class ResponseMakeCommand extends GeneratorCommand
     protected function getOptions()
     {
         return [
-            ['plain', 'p', InputOption::VALUE_NONE, 'Generate a plain response', null],
+            ['plain', 'p', InputOption::VALUE_NONE, 'Generate a plain entity', null],
         ];
     }
 
     /**
      * @return array|string
      */
-    protected function getResponseName($file_name=null)
+    protected function getEntityName($file_name = null)
     {
         $module_name = $this->getModuleName();
 
-        $response = empty($file_name)? studly_case($this->argument('name')) : $file_name;
+        $entity = empty($file_name)? studly_case($this->argument('name')) : $file_name;
 
-        return $module_name.$response;
+        return $module_name.$entity;
     }
 
     /**
      * @return array|string
      */
-    private function getResponseNameWithoutNamespace()
+    private function getEntityNameWithoutNamespace()
     {
-        return class_basename($this->getResponseName());
+        return class_basename($this->getEntityName());
     }
 
     public function getDefaultNamespace() : string
     {
-        return $this->laravel['modules']->config('paths.generator.response.path', 'Responses');
+        return $this->laravel['modules']->config('paths.generator.entity.path', 'Entitys');
     }
 
     /**
      * Get the stub file name based on the plain option
      * @return string
      */
-    private function getStubName()
+    private function getStubName($file_name)
     {
-        return '/responses/Response.stub';
+        return '/entities/'.$file_name.'.stub';
     }
 }

@@ -359,6 +359,12 @@ class ModuleGenerator extends Generator
             'name' =>  '',
             'module' => $this->getName(),
         ]);
+
+        $this->console->call('module:make-entity', [
+            'name' =>  '',
+            'module' => $this->getName(),
+        ]);
+
     }
 
     /**

@@ -1,0 +1,10 @@
+<?php
+
+namespace Modules\$MODULE$\Entities;
+
+use Modules\Core\Entities\BaseModel;
+
+abstract class BaseModel extends BaseModel
+{
+
+}

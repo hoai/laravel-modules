@@ -17,7 +17,7 @@ class ValidatorMakeCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $argumentName = 'validator';
+    protected $argumentName = 'name';
 
     /**
      * Single or multi file stubs need generate.
@@ -83,7 +83,7 @@ class ValidatorMakeCommand extends GeneratorCommand
     protected function getArguments()
     {
         return [
-            ['name', InputArgument::REQUIRED, 'The name of the validator class.'],
+            ['name', InputArgument::OPTIONAL, 'The name of the validator class.'],
             ['module', InputArgument::OPTIONAL, 'The name of module will be used.'],
         ];
     }
