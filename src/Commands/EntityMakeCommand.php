@@ -61,7 +61,7 @@ class EntityMakeCommand extends GeneratorCommand
     {
         $module = $this->laravel['modules']->findOrFail($this->getModuleName());
 
-        return (new Stub($this->getStubName(), [
+        return (new Stub($this->getStubName($file_name), [
             'MODULENAME'        => $module->getStudlyName(),
             'CONTROLLERNAME'    => $this->getEntityName(),
             'NAMESPACE'         => $module->getStudlyName(),

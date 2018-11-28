@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c15277e-ee40-40c1-b485-de1f9c9f8487" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.php" afterPath="$PROJECT_DIR$/config/config.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Commands/EntityMakeCommand.php" afterPath="$PROJECT_DIR$/src/Commands/EntityMakeCommand.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Generators/ModuleGenerator.php" afterPath="$PROJECT_DIR$/src/Generators/ModuleGenerator.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,18 +46,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EntityMakeCommand.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Commands/EntityMakeCommand.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="132" column="5" lean-forward="false" selection-start-line="132" selection-start-column="5" selection-end-line="132" selection-end-column="5" />
-              <folding>
-                <element signature="e#44#100#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ModuleCommandTrait.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Traits/ModuleCommandTrait.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -71,11 +56,23 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="EntityMakeCommand.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Commands/EntityMakeCommand.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="748">
+              <caret line="84" column="16" lean-forward="true" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="16" />
+              <folding>
+                <element signature="e#44#100#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="RepositoryMakeCommand.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Commands/RepositoryMakeCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="39" lean-forward="false" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+            <state relative-caret-position="374">
+              <caret line="63" column="54" lean-forward="false" selection-start-line="63" selection-start-column="44" selection-end-line="63" selection-end-column="54" />
               <folding>
                 <element signature="e#44#100#0#PHP" expanded="true" />
               </folding>
@@ -133,7 +130,6 @@
     <findStrings>
       <find>Repository</find>
       <find>getDestinationFilePath</find>
-      <find>getTemplateContents</find>
       <find>getTemplateContents()</find>
       <find>getDestinationFilePath()</find>
       <find>module:make-model</find>
@@ -161,6 +157,7 @@
       <find>GenerateConfigReader</find>
       <find>Entities</find>
       <find>getStubName</find>
+      <find>getTemplateContents</find>
     </findStrings>
     <replaceStrings>
       <replace>Response</replace>
@@ -671,12 +668,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542682501428</updated>
-      <workItem from="1542682503677" duration="57702000" />
+      <workItem from="1542682503677" duration="57747000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57702000" />
+    <option name="totallyTimeSpent" value="57747000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-78" width="1936" height="1056" extended-state="6" />
@@ -1122,8 +1119,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Commands/RepositoryMakeCommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="39" lean-forward="false" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+        <state relative-caret-position="374">
+          <caret line="63" column="54" lean-forward="false" selection-start-line="63" selection-start-column="44" selection-end-line="63" selection-end-column="54" />
           <folding>
             <element signature="e#44#100#0#PHP" expanded="true" />
           </folding>
@@ -1132,8 +1129,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Commands/EntityMakeCommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="132" column="5" lean-forward="false" selection-start-line="132" selection-start-column="5" selection-end-line="132" selection-end-column="5" />
+        <state relative-caret-position="748">
+          <caret line="84" column="16" lean-forward="true" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="16" />
           <folding>
             <element signature="e#44#100#0#PHP" expanded="true" />
           </folding>
