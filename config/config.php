@@ -122,6 +122,8 @@ return [
             'emails' => ['path' => 'Emails', 'generate' => true],
             'notifications' => ['path' => 'Notifications', 'generate' => true],
             'resource' => ['path' => 'Transformers', 'generate' => false],
+            'responses' => ['path' => 'Responses', 'generate' => true],
+
         ],
     ],
     /*

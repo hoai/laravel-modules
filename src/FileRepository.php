@@ -46,6 +46,7 @@ abstract class FileRepository implements RepositoryInterface, Countable
      * The current globally available modules cache (if any).
      *
      * @var static
+     * @var static
      */
     protected static $instanceModules = null;
 
@@ -150,11 +151,12 @@ abstract class FileRepository implements RepositoryInterface, Countable
      */
     public function all() : array
     {
-        if (!$this->config('cache.enabled')) {
-            return $this->scan();
-        }
-
-        return $this->formatCached($this->getCached());
+        return $this->scan();
+//        if (!$this->config('cache.enabled')) {
+//            return $this->scan();
+//        }
+//
+//        return $this->formatCached($this->getCached());
     }
 
     /**

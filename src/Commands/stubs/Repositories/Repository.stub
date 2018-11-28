@@ -1,0 +1,19 @@
+<?php
+
+namespace Modules\$MODULE$\Repositories;
+
+use Modules\$MODULE$\Entities\$MODULE$;
+
+class $MODULE$Repository extends $MODULE$BaseRepository
+{
+
+    /**
+     * Specify Model class name
+     *
+     * @return string
+     */
+    public function model()
+    {
+        return $MODULE$::class;
+    }
+}

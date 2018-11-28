@@ -1,0 +1,10 @@
+<?php
+
+namespace Modules\$MODULE$\Repositories;
+
+use Modules\Core\Repositories\BaseRepositoryEloquent;
+
+abstract class $MODULE$BaseRepository extends BaseRepositoryEloquent
+{
+
+}
