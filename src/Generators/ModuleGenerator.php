@@ -344,6 +344,21 @@ class ModuleGenerator extends Generator
             'controller' => $this->getName() . 'Controller',
             'module' => $this->getName(),
         ]);
+
+        $this->console->call('module:make-repository', [
+            'name' => $this->getName() . 'Repository',
+            'module' => $this->getName(),
+        ]);
+
+        $this->console->call('module:make-validator', [
+            'name' => $this->getName() . 'Validator',
+            'module' => $this->getName(),
+        ]);
+
+        $this->console->call('module:make-response', [
+            'name' => $this->getName() . 'Response',
+            'module' => $this->getName(),
+        ]);
     }
 
     /**
