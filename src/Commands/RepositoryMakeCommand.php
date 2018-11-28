@@ -83,7 +83,7 @@ class RepositoryMakeCommand extends GeneratorCommand
     protected function getArguments()
     {
         return [
-            ['repository', InputArgument::REQUIRED, 'The name of the repository class.'],
+            ['name', InputArgument::REQUIRED, 'The name of the repository class.'],
             ['module', InputArgument::OPTIONAL, 'The name of module will be used.'],
         ];
     }
@@ -105,7 +105,7 @@ class RepositoryMakeCommand extends GeneratorCommand
     {
         $module_name = $this->getModuleName();
 
-        $repository = empty($file_name)? studly_case($this->argument('repository')) : $file_name;
+        $repository = empty($file_name)? studly_case($this->argument('name')) : $file_name;
 
         if (empty($file_name) && str_contains(strtolower($repository), 'repository') === false) {
             $repository .= 'Repository';

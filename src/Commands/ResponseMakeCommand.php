@@ -83,7 +83,7 @@ class ResponseMakeCommand extends GeneratorCommand
     protected function getArguments()
     {
         return [
-            ['response', InputArgument::REQUIRED, 'The name of the response class.'],
+            ['name', InputArgument::REQUIRED, 'The name of the response class.'],
             ['module', InputArgument::OPTIONAL, 'The name of module will be used.'],
         ];
     }
@@ -105,7 +105,7 @@ class ResponseMakeCommand extends GeneratorCommand
     {
         $module_name = $this->getModuleName();
 
-        $response = empty($file_name)? studly_case($this->argument('response')) : $file_name;
+        $response = empty($file_name)? studly_case($this->argument('name')) : $file_name;
 
         return $module_name.$response;
     }

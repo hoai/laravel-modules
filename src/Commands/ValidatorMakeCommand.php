@@ -83,7 +83,7 @@ class ValidatorMakeCommand extends GeneratorCommand
     protected function getArguments()
     {
         return [
-            ['validator', InputArgument::REQUIRED, 'The name of the validator class.'],
+            ['name', InputArgument::REQUIRED, 'The name of the validator class.'],
             ['module', InputArgument::OPTIONAL, 'The name of module will be used.'],
         ];
     }
@@ -105,7 +105,7 @@ class ValidatorMakeCommand extends GeneratorCommand
     {
         $module_name = $this->getModuleName();
 
-        $validator = empty($file_name)? studly_case($this->argument('validator')) : $file_name;
+        $validator = empty($file_name)? studly_case($this->argument('name')) : $file_name;
 
         if (empty($file_name) && str_contains(strtolower($validator), 'validator') === false) {
             $validator .= 'Validator';

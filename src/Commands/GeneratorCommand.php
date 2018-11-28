@@ -48,15 +48,17 @@ abstract class GeneratorCommand extends Command
             $this->laravel['files']->makeDirectory($dir, 0777, true);
         }
 
-        if(empty($multiFiles)){
+        if(empty($this->multiFiles)){
 
             $contents = $this->getTemplateContents();
 
             $this->fileGenerate($path, $contents);
         }
         else {
-
-            foreach($multiFiles as $file_name){
+            if(!empty($this->argument('name'))){
+                $this->multiFiles = [$this->argument('name')];
+            }
+            foreach($this->multiFiles as $file_name){
 
                 $path = str_replace('\\', '/', $this->getDestinationFilePath($file_name));
 
