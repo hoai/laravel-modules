@@ -49,7 +49,7 @@ class EntityMakeCommand extends GeneratorCommand
     {
         $path = $this->laravel['modules']->getModulePath($this->getModuleName());
 
-        $entityPath = GenerateConfigReader::read('entity');
+        $entityPath = GenerateConfigReader::read('model');
 
         return $path . $entityPath->getPath() . '/' . $this->getEntityName($file_name) . '.php';
     }
@@ -120,7 +120,7 @@ class EntityMakeCommand extends GeneratorCommand
 
     public function getDefaultNamespace() : string
     {
-        return $this->laravel['modules']->config('paths.generator.entity.path', 'Entitys');
+        return $this->laravel['modules']->config('paths.generator.model.path', 'Entities');
     }
 
     /**
