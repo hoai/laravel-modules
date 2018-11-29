@@ -14,6 +14,6 @@ class $MODULE$Repository extends $MODULE$BaseRepository
      */
     public function model()
     {
-        return $MODULE$::class;
+        return $MODULE$Model::class;
     }
 }
