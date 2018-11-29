@@ -12,8 +12,9 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
-Route::group(['middleware' => 'auth:api', 'prefix' => '$LOWER_NAME$', 'namespace' => 'Modules\$STUDLY_NAME$\Http\Controllers'], function()
-{
+Route::group([
+    'middleware' => 'auth:api',
+    'prefix' => 'v1'
+], function () {
     Route::resource('$LOWER_NAME$', '$STUDLY_NAME$Controller');
 });
