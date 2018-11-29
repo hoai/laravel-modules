@@ -107,7 +107,7 @@ class RepositoryMakeCommand extends GeneratorCommand
 
         $repository = empty($file_name)? studly_case($this->argument('name')) : $file_name;
 
-        if (empty($file_name) && str_contains(strtolower($repository), 'repository') === false) {
+        if (!empty($this->argument('name')) && str_contains(strtolower($repository), 'repository') === false) {
             $repository .= 'Repository';
         }
 
@@ -134,6 +134,6 @@ class RepositoryMakeCommand extends GeneratorCommand
      */
     private function getStubName($file_name)
     {
-        return '/Repositories/'.$file_name.'.stub';
+        return !empty($this->argument('name')) ? '/repositories/Repository.stub':'/repositories/'.$file_name.'.stub';
     }
 }
