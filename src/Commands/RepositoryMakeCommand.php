@@ -63,15 +63,16 @@ class RepositoryMakeCommand extends GeneratorCommand
 
         return (new Stub($this->getStubName($file_name), [
             'MODULENAME'        => $module->getStudlyName(),
-            'CONTROLLERNAME'    => $this->getRepositoryName(),
+            'REPOSITORYNAME'    => $this->getRepositoryName(),
             'NAMESPACE'         => $module->getStudlyName(),
             'CLASS_NAMESPACE'   => $this->getClassNamespace($module),
-            'CLASS'             => $this->getRepositoryNameWithoutNamespace(),
+            'CLASS'             => $this->getRepositoryNameWithoutNamespace($file_name),
             'LOWER_NAME'        => $module->getLowerName(),
             'MODULE'            => $this->getModuleName(),
             'NAME'              => $this->getModuleName(),
             'STUDLY_NAME'       => $module->getStudlyName(),
             'MODULE_NAMESPACE'  => $this->laravel['modules']->config('namespace'),
+            'MODEL_NAME'         => $this->getModuleName().studly_case($this->argument('name')),
         ]))->render();
     }
 
@@ -118,9 +119,9 @@ class RepositoryMakeCommand extends GeneratorCommand
     /**
      * @return array|string
      */
-    private function getRepositoryNameWithoutNamespace()
+    private function getRepositoryNameWithoutNamespace($file_name)
     {
-        return class_basename($this->getRepositoryName());
+        return class_basename($this->getRepositoryName($file_name));
     }
 
     public function getDefaultNamespace() : string

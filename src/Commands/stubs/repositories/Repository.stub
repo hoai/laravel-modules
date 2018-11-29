@@ -4,7 +4,7 @@ namespace Modules\$MODULE$\Repositories;
 
 use Modules\$MODULE$\Entities\$MODULE$Model;
 
-class $MODULE$Repository extends $MODULE$BaseRepository
+class $CLASS$ extends $MODULE$BaseRepository
 {
 
     /**
@@ -14,6 +14,6 @@ class $MODULE$Repository extends $MODULE$BaseRepository
      */
     public function model()
     {
-        return $MODULE$Model::class;
+        return $MODEL_NAME$Model::class;
     }
 }
