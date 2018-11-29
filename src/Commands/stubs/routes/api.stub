@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::group(['middleware' => 'auth:api', 'prefix' => '$LOWER_NAME$', 'namespace' => 'Modules\$MODULE$\Http\Controllers'], function()
+Route::group(['middleware' => 'auth:api', 'prefix' => '$LOWER_NAME$', 'namespace' => 'Modules\$STUDLY_NAME$\Http\Controllers'], function()
 {
-    Route::resource('$LOWER_NAME$', '$MODULE$Controller');
+    Route::resource('$LOWER_NAME$', '$STUDLY_NAME$Controller');
 });

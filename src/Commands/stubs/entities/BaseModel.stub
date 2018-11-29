@@ -4,7 +4,7 @@ namespace Modules\$MODULE$\Entities;
 
 use Modules\Core\Entities\BaseModel;
 
-abstract class BaseModel extends BaseModel
+abstract class $MODULE$BaseModel extends BaseModel
 {
 
 }

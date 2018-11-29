@@ -2,7 +2,7 @@
 
 namespace Modules\$MODULE$\Repositories;
 
-use Modules\$MODULE$\Entities\$MODULE$;
+use Modules\$MODULE$\Entities\$MODULE$Model;
 
 class $MODULE$Repository extends $MODULE$BaseRepository
 {

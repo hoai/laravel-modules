@@ -106,6 +106,9 @@ class ResponseMakeCommand extends GeneratorCommand
         $module_name = $this->getModuleName();
 
         $response = empty($file_name)? studly_case($this->argument('name')) : $file_name;
+        if (empty($file_name) && str_contains(strtolower($response), 'response') === false) {
+            $response .= 'Response';
+        }
 
         return $module_name.$response;
     }
