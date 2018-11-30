@@ -2,9 +2,9 @@
 
 namespace Modules\$MODULE$\Entities;
 
-class $MODULE$Model extends $MODULE$BaseModel
+class $CLASS$ extends $MODULE$BaseModel
 {
-    protected $table = '$LOWER_NAME$';
+    protected $table = '$TABLE_NAME$';
 
     protected $fillable = [
         'name',

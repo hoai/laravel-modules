@@ -63,15 +63,16 @@ class EntityMakeCommand extends GeneratorCommand
 
         return (new Stub($this->getStubName($file_name), [
             'MODULENAME'        => $module->getStudlyName(),
-            'CONTROLLERNAME'    => $this->getEntityName(),
+            'ENTITYNAME'        => $this->getEntityName(),
             'NAMESPACE'         => $module->getStudlyName(),
             'CLASS_NAMESPACE'   => $this->getClassNamespace($module),
-            'CLASS'             => $this->getEntityNameWithoutNamespace(),
+            'CLASS'             => $this->getEntityNameWithoutNamespace($file_name),
             'LOWER_NAME'        => $module->getLowerName(),
             'MODULE'            => $this->getModuleName(),
             'NAME'              => $this->getModuleName(),
             'STUDLY_NAME'       => $module->getStudlyName(),
             'MODULE_NAMESPACE'  => $this->laravel['modules']->config('namespace'),
+            'TABLE_NAME'         => studly_case($this->argument('name')),
         ]))->render();
     }
 
@@ -107,15 +108,19 @@ class EntityMakeCommand extends GeneratorCommand
 
         $entity = empty($file_name)? studly_case($this->argument('name')) : $file_name;
 
+        if (!empty($this->argument('name')) && str_contains(strtolower($entity), 'model') === false) {
+            $entity .= 'Model';
+        }
+
         return $module_name.$entity;
     }
 
     /**
      * @return array|string
      */
-    private function getEntityNameWithoutNamespace()
+    private function getEntityNameWithoutNamespace($file_name)
     {
-        return class_basename($this->getEntityName());
+        return class_basename($this->getEntityName($file_name));
     }
 
     public function getDefaultNamespace() : string
@@ -129,6 +134,6 @@ class EntityMakeCommand extends GeneratorCommand
      */
     private function getStubName($file_name = null)
     {
-        return '/entities/'.$file_name.'.stub';
+        return !empty($this->argument('name')) ? '/entities/Model.stub':'/entities/'.$file_name.'.stub';
     }
 }
