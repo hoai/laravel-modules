@@ -63,15 +63,16 @@ class ResponseMakeCommand extends GeneratorCommand
 
         return (new Stub($this->getStubName(), [
             'MODULENAME'        => $module->getStudlyName(),
-            'CONTROLLERNAME'    => $this->getResponseName(),
+            'RESPONSENAME'    => $this->getResponseName(),
             'NAMESPACE'         => $module->getStudlyName(),
             'CLASS_NAMESPACE'   => $this->getClassNamespace($module),
-            'CLASS'             => $this->getResponseNameWithoutNamespace(),
+            'CLASS'             => $this->getResponseNameWithoutNamespace($file_name),
             'LOWER_NAME'        => $module->getLowerName(),
             'MODULE'            => $this->getModuleName(),
             'NAME'              => $this->getModuleName(),
             'STUDLY_NAME'       => $module->getStudlyName(),
             'MODULE_NAMESPACE'  => $this->laravel['modules']->config('namespace'),
+            'TABLE_NAME'        => !empty($this->argument('name')) ? strtolower($this->argument('name')) : $module->getLowerName(),
         ]))->render();
     }
 
@@ -106,7 +107,7 @@ class ResponseMakeCommand extends GeneratorCommand
         $module_name = $this->getModuleName();
 
         $response = empty($file_name)? studly_case($this->argument('name')) : $file_name;
-        if (empty($file_name) && str_contains(strtolower($response), 'response') === false) {
+        if (str_contains(strtolower($response), 'response') === false) {
             $response .= 'Response';
         }
 
@@ -116,9 +117,9 @@ class ResponseMakeCommand extends GeneratorCommand
     /**
      * @return array|string
      */
-    private function getResponseNameWithoutNamespace()
+    private function getResponseNameWithoutNamespace($file_name)
     {
-        return class_basename($this->getResponseName());
+        return class_basename($this->getResponseName($file_name));
     }
 
     public function getDefaultNamespace() : string
