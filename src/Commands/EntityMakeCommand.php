@@ -72,7 +72,7 @@ class EntityMakeCommand extends GeneratorCommand
             'NAME'              => $this->getModuleName(),
             'STUDLY_NAME'       => $module->getStudlyName(),
             'MODULE_NAMESPACE'  => $this->laravel['modules']->config('namespace'),
-            'TABLE_NAME'         => studly_case($this->argument('name')),
+            'TABLE_NAME'         => !empty($this->argument('name')) ? strtolower($this->argument('name')) : $module->getLowerName(),
         ]))->render();
     }
 

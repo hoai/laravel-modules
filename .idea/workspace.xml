@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7c15277e-ee40-40c1-b485-de1f9c9f8487" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Commands/EntityMakeCommand.php" afterPath="$PROJECT_DIR$/src/Commands/EntityMakeCommand.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Commands/stubs/entities/Model.stub" afterPath="$PROJECT_DIR$/src/Commands/stubs/entities/Model.stub" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -61,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EntityMakeCommand.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EntityMakeCommand.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Commands/EntityMakeCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="74" column="23" lean-forward="false" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="23" />
+            <state relative-caret-position="616">
+              <caret line="76" column="5" lean-forward="false" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
               <folding>
                 <element signature="e#44#100#0#PHP" expanded="true" />
               </folding>
@@ -83,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Model.stub" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Model.stub" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Commands/stubs/entities/Model.stub">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+            <state relative-caret-position="264">
+              <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -171,8 +170,8 @@
         <option value="$PROJECT_DIR$/src/Commands/stubs/routes/api.stub" />
         <option value="$PROJECT_DIR$/src/Commands/stubs/repositories/Repository.stub" />
         <option value="$PROJECT_DIR$/src/Commands/RepositoryMakeCommand.php" />
-        <option value="$PROJECT_DIR$/src/Commands/EntityMakeCommand.php" />
         <option value="$PROJECT_DIR$/src/Commands/stubs/entities/Model.stub" />
+        <option value="$PROJECT_DIR$/src/Commands/EntityMakeCommand.php" />
       </list>
     </option>
   </component>
@@ -658,12 +657,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542682501428</updated>
-      <workItem from="1542682503677" duration="66717000" />
+      <workItem from="1542682503677" duration="66985000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66717000" />
+    <option name="totallyTimeSpent" value="66985000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-78" width="1936" height="1056" extended-state="6" />
@@ -1101,6 +1100,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Commands/stubs/entities/Model.stub">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Commands/stubs/repositories/Repository.stub">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -1111,19 +1118,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Commands/EntityMakeCommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="74" column="23" lean-forward="false" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="23" />
+        <state relative-caret-position="616">
+          <caret line="76" column="5" lean-forward="false" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
           <folding>
             <element signature="e#44#100#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Commands/stubs/entities/Model.stub">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
